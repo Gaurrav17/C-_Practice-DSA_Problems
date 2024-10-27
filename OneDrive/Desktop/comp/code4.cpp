@@ -6,6 +6,7 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
 public:
+    static int z;
     vector<int> findTwoElement(vector<int> arr, int n) {
        unordered_map<int, int> mp;
        vector<int> v;
@@ -49,6 +50,8 @@ public:
 
 //{ Driver Code Starts.
 
+int Solution::z = 5;
+
 int main() { 
     
         int n;
@@ -57,9 +60,11 @@ int main() {
         for (int i = 0; i < n; i++) {
             cin >> a[i];
         }
+
+        int a = Solution::z;
+        cout<<"THe value of a is "<<a<<endl;
         Solution ob;
-        auto ans = ob.findTwoElement(a, n);
-        cout << ans[0] << " " << ans[1] << "\n";
+   
    
     return 0;
 }
